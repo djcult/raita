@@ -1,0 +1,26 @@
+﻿ body {
+ 	background-color: #C9FFCF;
+ }
+ 
+ #header {
+ 	height: 40px;
+ 	background-image: url(/Content/logo.png);
+ 	background-repeat: no-repeat;
+ 	border-bottom: dotted 1px #5B7F00;
+ }
+ 
+ #header-content  
+ {
+ 	float: right;
+ 	margin-top: 10px;
+ 	font-family:sans-serif;
+ 	font-size: 12px;
+ 	letter-spacing: 3px;
+ 	border: dotted 1px #5B7F00;
+ }
+ 
+ #editor {
+        position: absolute;
+        width: 99%;
+        height: 92%;
+    }

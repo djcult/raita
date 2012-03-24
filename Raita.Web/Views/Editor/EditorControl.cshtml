@@ -1,0 +1,14 @@
+﻿@model Raita.Web.Models.Editor
+<script src="/Scripts/Ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="/Scripts/Ace/theme-twilight.js" type="text/javascript" charset="utf-8"></script>
+<script src="/Scripts/Ace/mode-gherkin.js" type="text/javascript" charset="utf-8"></script>
+<script>
+	window.onload = function () {
+		var editor = ace.edit("editor");
+		editor.setTheme("ace/theme/twilight");
+		
+		var JavaScriptMode = require("ace/mode/gherkin").Mode;
+		editor.getSession().setMode(new JavaScriptMode());
+	};
+</script>	
+<div id="editor">@Model.Content</div>
