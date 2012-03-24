@@ -1,0 +1,3 @@
+[submodule "libs/gherkin-editor"]
+	path = libs/gherkin-editor
+	url = git@github.com:djcult/gherkin-editor.git
