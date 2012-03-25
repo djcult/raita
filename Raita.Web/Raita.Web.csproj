@@ -166,7 +166,7 @@ xcopy /y /e $(ProjectDir)\..\libs\gherkin-editor\public\js $(ProjectDir)\js
 mkdir $(ProjectDir)\js\ace
 xcopy /y /e $(ProjectDir)\..\libs\gherkin-editor\vendor\ace\build\src $(ProjectDir)\js\ace
 mkdir $(ProjectDir)\js\gherkin
-xcopy /y /e $(ProjectDir)\..\libs\gherkin-editor\node_modules\gherkin\lib\gherkin $(ProjectDir)\js\gherkin
+xcopy /y /e $(ProjectDir)\..\libs\node_modules\gherkin\lib\gherkin $(ProjectDir)\js\gherkin
 </PreBuildEvent>
   </PropertyGroup>
 </Project>
