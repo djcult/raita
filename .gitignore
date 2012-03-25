@@ -51,3 +51,8 @@ packages/
 #ncrunch
 *ncrunch*
 *crunch*.local.xml
+
+#rebased gherkin-editor support files
+/Raita.Web/applet/
+/Raita.Web/css/
+/Raita.Web/js/

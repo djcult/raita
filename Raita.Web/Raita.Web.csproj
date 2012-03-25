@@ -14,6 +14,7 @@
     <AssemblyName>Raita.Web</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -151,6 +152,21 @@
     </VisualStudio>
   </ProjectExtensions>
   <PropertyGroup>
-    <PreBuildEvent>xcopy /y /e $(ProjectDir)\..\libs\ace\build\src $(ProjectDir)\Scripts\Ace</PreBuildEvent>
+    <PreBuildEvent>rmdir /s /q  $(ProjectDir)\applet
+mkdir $(ProjectDir)\applet
+xcopy /y /e $(ProjectDir)\..\libs\gherkin-editor\public\applet $(ProjectDir)\applet
+
+rmdir /s /q $(ProjectDir)\css
+mkdir $(ProjectDir)\css
+xcopy /y /e $(ProjectDir)\..\libs\gherkin-editor\public\css $(ProjectDir)\css
+
+rmdir /s /q $(ProjectDir)\js
+mkdir $(ProjectDir)\js
+xcopy /y /e $(ProjectDir)\..\libs\gherkin-editor\public\js $(ProjectDir)\js
+mkdir $(ProjectDir)\js\ace
+xcopy /y /e $(ProjectDir)\..\libs\gherkin-editor\vendor\ace\build\src $(ProjectDir)\js\ace
+mkdir $(ProjectDir)\js\gherkin
+xcopy /y /e $(ProjectDir)\..\libs\gherkin-editor\node_modules\gherkin\lib\gherkin $(ProjectDir)\js\gherkin
+</PreBuildEvent>
   </PropertyGroup>
 </Project>
