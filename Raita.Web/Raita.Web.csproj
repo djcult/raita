@@ -84,7 +84,7 @@
     <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
     <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
     <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
-    <Content Include="js\editor.js" />
+    <Content Include="Content\editor.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -115,7 +115,9 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="js\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
@@ -164,6 +166,7 @@ xcopy /y /e $(ProjectDir)\..\libs\gherkin-editor\public\css $(ProjectDir)\css
 rmdir /s /q $(ProjectDir)\js
 mkdir $(ProjectDir)\js
 xcopy /y /e $(ProjectDir)\..\libs\gherkin-editor\public\js $(ProjectDir)\js
+xcopy /y /e $(ProjectDir)\Content\editor.js $(ProjectDir)\js
 mkdir $(ProjectDir)\js\ace
 xcopy /y /e $(ProjectDir)\..\libs\gherkin-editor\vendor\ace\build\src $(ProjectDir)\js\ace
 mkdir $(ProjectDir)\js\gherkin
