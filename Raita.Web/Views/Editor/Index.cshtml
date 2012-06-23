@@ -1,0 +1,10 @@
+﻿@using Raita.Web.Models
+@model Editor
+
+@{
+	ViewBag.Title = "raita";
+}
+
+@Html.Partial("~/Views/Editor/EditorControl.cshtml", new Editor { Content = Model.Content })
+
+
