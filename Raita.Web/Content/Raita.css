@@ -11,6 +11,14 @@
     border-bottom: dotted 1px #5B7F00;
 }
 
+#header-home
+{
+    float: left;
+    width: 130px;
+    height: 40px;
+    text-indent: -9999px;
+}
+
 #header-content
 {
     float: right;
